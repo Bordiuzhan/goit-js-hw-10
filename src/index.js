@@ -17,7 +17,6 @@ function onInput(e) {
     return;
   }
 
-  console.log(editedValue);
   fetchCountries(editedValue)
     .then(data => {
       const length = data.length;
@@ -51,7 +50,6 @@ function createMarkupList(arr) {
 
 function createMarkupCard(arr) {
   const { flags, name, capital, population, languages } = arr;
-  console.log(name);
   return `<h2><img src="${flags.svg}" alt="flag" width=30 /> ${name.common}</h2>
   <p><b>Capital:</b> ${capital}</p>
   <p><b>Population:</b> ${population}</p>
