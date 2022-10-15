@@ -27,11 +27,11 @@ function onInput(e) {
       }
       if ((length < 10) & (length > 1)) {
         const markup = createMarkupList(data);
-        list.innerHTML = markup;
+        list.insertAdjacentHTML('beforeend', markup);
       }
       if (length === 1) {
         const markup = createMarkupCard(data[0]);
-        card.innerHTML = markup;
+        card.insertAdjacentHTML('beforeend', markup);
       }
     })
     .catch(err =>
