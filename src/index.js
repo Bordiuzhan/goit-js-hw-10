@@ -25,7 +25,7 @@ function onInput(e) {
           'Too many matches found. Please enter a more specific name.'
         );
       }
-      if ((length < 10) & (length > 1)) {
+      if (length < 10 && length > 1) {
         const markup = createMarkupList(data);
         list.insertAdjacentHTML('beforeend', markup);
       }
